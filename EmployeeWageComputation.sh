@@ -3,6 +3,7 @@
 isPartTime=1;
 isFullTime=2;
 empRatePerHr=20;
+workingDayPerMonth=20;
 empCheck=$((RANDOM%3));
 
 case $empCheck in
@@ -17,5 +18,5 @@ case $empCheck in
 		;;
 esac
 
-salary=$(($empHrs*$empRatePerHr))
+salary=$(($workingDayPerMonth*$empHrs*$empRatePerHr))
 echo "salary=$salary"
